@@ -4,6 +4,19 @@ body{
     height: 100%;
     width: 100%;
 }
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-responsive {
+  width: 13rem;
+  height: 13rem;
+}
+
 @media (min-width: 300px) and (max-width:575px) {
     .btn{
         margin: 0 2% !important;
