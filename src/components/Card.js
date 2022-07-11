@@ -9,7 +9,7 @@ const Card = ({ item }) => {
           {item.map((Val) => {
             return (
               <div
-                className="flex col-md-4 col-sm-6 card my-3 py-3 border-0"
+                className="flex col-md-4 col-sm-6 my-3 py-3 border-0"
                 key={Val.id}
               >
                 <div className="card-img-top text-center">

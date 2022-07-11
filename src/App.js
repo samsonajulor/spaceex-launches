@@ -55,7 +55,7 @@ const App = () => {
           <Buttons filterItem={filterItem} setItem={setItem} menuItems={menuItems} />
           <Card item={item} />
         </div>
-        <Pagination prevPage={prevPage} item={item} handlePage={handlePage} nextPage={nextPage} page={page} loading={loading} />
+        <Pagination prevPage={prevPage} item={data} handlePage={handlePage} nextPage={nextPage} page={page} loading={loading} />
       </div>
     </>
   );
