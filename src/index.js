@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { AppProvider } from './context/searchContext';
-import './index.css';
+import { ApolloProvider, client } from './graphql';
 import App from './App';
+
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppProvider>
-      <App />
-    </AppProvider>
+    <ApolloProvider client={client}>
+        <App />
+    </ApolloProvider>
   </React.StrictMode>
 );
