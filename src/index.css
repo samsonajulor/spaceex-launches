@@ -10,6 +10,26 @@
   height: 8rem;
 }
 
+.search-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-input {
+  width: 100%;
+  border: transparent;
+  max-width: 600px;
+  background: var(--clr-white);
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  color: var(--clr-grey-3);
+  letter-spacing: var(--spacing);
+  margin-top: 1rem;
+}
 @media (min-width: 300px) and (max-width:575px) {
     .btn{
         margin: 0 2% !important;

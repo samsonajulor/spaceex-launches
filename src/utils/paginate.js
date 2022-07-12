@@ -6,7 +6,6 @@ const paginate = (item) => {
     const start = index * itemsPerPage;
     return item.slice(start, start + itemsPerPage);
   });
-
   return newItem;
 };
 

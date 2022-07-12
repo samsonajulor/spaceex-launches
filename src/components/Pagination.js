@@ -6,7 +6,7 @@ const Pagination = ({prevPage, item, handlePage, nextPage, page, loading}) => {
           <button className='prev-btn' onClick={prevPage}>
             prev
           </button>
-          {item.map((item, index) => {
+          {item?.map((item, index) => {
             return (
               <button
                 key={index}

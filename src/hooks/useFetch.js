@@ -1,18 +1,19 @@
 import { useState, useEffect } from 'react';
 import paginate from '../utils/paginate';
-import Data from '../db/Data';
+import { useGlobalContext } from '../context/searchContext';
 
 export const useFetch = () => {
+  const { globalItem } = useGlobalContext();
+
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
-  const getUsers = async () => {
-    setData(paginate(Data));
-    setLoading(false);
-  };
-
   useEffect(() => {
+   const getUsers = async () => {
+       setData(paginate(globalItem));
+       setLoading(false);
+     };
     getUsers();
-  }, []);
+  }, [globalItem]);
   return { loading, data };
 };
