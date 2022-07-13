@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param {array} item 
+ * @returns array of objects
+ */
 const paginate = (item) => {
   const itemsPerPage = 4;
   const numberOfPages = Math.ceil(item.length / itemsPerPage);

@@ -7,7 +7,7 @@ const Buttons = ({data, filterItem, setItem, menuItems }) => {
         </button>
         {menuItems.map((val, id) => {
           return (
-            <button className='btn-primary text-white p-1 px-2 mx-5 btn fw-bold' onClick={() => filterItem(val)} key={id}>
+            <button className='btn-primary text-white p-1 px-2 mx-5 btn fw-bold' onClick={(e) => filterItem(e)} key={id}>
               {val}
             </button>
           );

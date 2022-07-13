@@ -1,3 +1,21 @@
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto;
+  margin-top: 10rem;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  border-top-color: var(--clr-primary-5);
+  animation: spinner 0.6s linear infinite;
+}
+
 .flex {
   display: flex;
   flex-direction: row;
@@ -170,21 +188,9 @@ p {
     line-height: 1;
   }
 }
-
-/*
-=============== 
-Pagination
-===============
-*/
 .section-title {
   text-align: center;
   margin: 4rem 0 6rem 0;
-}
-.underline {
-  width: 8rem;
-  height: 0.25rem;
-  background: var(--clr-primary-5);
-  margin: 0 auto;
 }
 .container {
   display: grid;
@@ -226,30 +232,9 @@ h4 {
   justify-content: center;
   flex-wrap: wrap;
 }
-.page-btn {
-  width: 2rem;
-  height: 2rem;
-  background: var(--clr-primary-7);
-  border-color: transparent;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 0.5rem;
-  transition: var(--transition);
-}
 .active-btn {
   background: var(--clr-primary-1);
   color: var(--clr-white);
-}
-.prev-btn,
-.next-btn {
-  background: transparent;
-  border-color: transparent;
-  font-weight: bold;
-  text-transform: capitalize;
-  letter-spacing: var(--spacing);
-  margin: 0.5rem;
-  font-size: 1rem;
-  cursor: pointer;
 }
 
 @media screen and (min-width: 775px) {

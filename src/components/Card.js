@@ -7,19 +7,20 @@ const Card = ({ item, loading, error }) => {
   return (
     <>
       {!loading && !error && (
-        <div className='container-fluid'>
+        <div className='container-fluid mt-5'>
           <div className='row justify-content-center'>
             {item?.map((val) => {
               return (
-                <div className='flex col-md-4 col-sm-6 my-3 py-3 border-0' key={val.id}>
-                  <div className='card-img-top text-center'>
-                    <img src={val.image} alt={val.name} className='img-responsive' />
-                  </div>
+                <div className='card w-30' key={val.id}>
+                  {/* <img src={val.image} className='card-img-top' alt='val' /> */}
                   <div className='card-body'>
-                    <div className='card-title  fs-10'>{val.name}</div>
-                    <div className='card-title fw-bold fs-8'>{val.species}</div>
-                    <div className='card-title text-info fs-10'>{val.status}</div>
-                    {/* <div className='card-text fw-light fs-10'>{truncate(val.desc, 108)}</div> */}
+                    <h5 className='card-title, mb-0'>{val.mission_name}</h5>
+                    <p className='card-text'>
+                      {val.launch_date_local}
+                    </p>
+
+                    <h6 className='card-subtitle text-muted'>Mission Success</h6>
+                    <p className={`card-text ${val.launch_success ? 'text-success' : 'text-danger'}`}>{val.launch_success ? 'YES' : 'NO'}</p>
                   </div>
                 </div>
               );

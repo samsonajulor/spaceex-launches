@@ -1,20 +1,26 @@
 import { gql } from '@apollo/client';
 
-const GET_ALL_CHARACTERS = gql`
-  query Character($page: Int) {
-    characters(page: $page) {
-      results {
-        id
-        name
-        image
-        status
-        species
-        location {
-          name
-        }
+const LAUNCHES_PAST = gql`
+  query launchesPast($sort: String) {
+    launchesPast(sort: $sort) {
+      id
+      mission_name
+      launch_date_local
+      launch_year
+      launch_success
+      launch_site {
+        site_name_long
       }
+      links {
+        article_link
+        video_link
+      }
+      rocket {
+        rocket_name
+      }
+      details
     }
   }
 `;
 
-export { GET_ALL_CHARACTERS };
+export { LAUNCHES_PAST };
