@@ -3,7 +3,6 @@ import Card from './components/Card';
 import Buttons from './components/Buttons';
 import { useQuery } from '@apollo/client';
 import { LAUNCHES_PAST } from './queries/query';
-import Pagination from './components/Pagination';
 
 const App = () => {
   const { loading, error, data, refetch } = useQuery(LAUNCHES_PAST, {

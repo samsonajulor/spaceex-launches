@@ -11,7 +11,7 @@
  */
 export function groupBy(list, keyGetter) {
   const map = new Map();
-  list.forEach((item) => {
+  list?.forEach((item) => {
     const key = keyGetter(item);
     const collection = map.get(key);
     if (!collection) {
