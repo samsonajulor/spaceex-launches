@@ -1,4 +1,4 @@
-# user-locator
+# space-ex past launches
 Filter and search for past launches from spaceex api using react, graphql and apollo server
 
 hosted at 
